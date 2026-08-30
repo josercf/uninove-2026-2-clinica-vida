@@ -37,4 +37,4 @@ ef85d6d.js
 method: get
 status: 200 OK
 ```
-# formulário de agendamento da Clínica Vida+ vai precisar do https para garantir a privacidade do paciente e médico ,como o cpf do paciente. Já que o mesmo possui uma cipritografia que impede essas informações de serem adulteradas ou interceptadas.
+## formulário de agendamento da Clínica Vida+ vai precisar do https para garantir a privacidade do paciente e médico ,como o cpf do paciente. Já que o mesmo possui uma cipritografia que impede essas informações de serem adulteradas ou interceptadas.
