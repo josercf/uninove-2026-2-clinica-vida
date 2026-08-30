@@ -11,7 +11,7 @@ sequenceDiagram
     N->>S: GET /consultas/agendar
     S-->>N: 200 OK, HTML da agenda
 ```
-```mermaid
+```
 C:\Users\User>nslookup uninove.br 8.8.8.8
 Servidor:  dns.google
 Address:  8.8.8.8
@@ -20,7 +20,7 @@ Não é resposta autoritativa:
 Nome:    uninove.br
 Address:  167.99.0.217
 ```
-```mermaid
+```
 css2?family=Raleway:ital
 method: get
 status 200 OK
