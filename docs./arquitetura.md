@@ -11,7 +11,8 @@ sequenceDiagram
     N->>S: GET /consultas/agendar
     S-->>N: 200 OK, HTML da agenda
 ```
-```C:\Users\User>nslookup uninove.br 8.8.8.8
+## Evidência do DNS
+C:\Users\User>nslookup uninove.br 8.8.8.8
 Servidor:  dns.google
 Address:  8.8.8.8
 
@@ -19,7 +20,8 @@ Não é resposta autoritativa:
 Nome:    uninove.br
 Address:  167.99.0.217
 ```
-```
+
+## Evidência do HTTP
 css2?family=Raleway:ital
 method: get
 status 200 OK
@@ -36,4 +38,5 @@ ef85d6d.js
 method: get
 status: 200 OK
 ```
-# formulário de agendamento da Clínica Vida+ vai precisar do https para garantir a privacidade do paciente e médico ,como o cpf do paciente. Já que o mesmo possui uma cipritografia que impede essas informações de serem adulteradas ou interceptadas.
+## Por que o formulário de agendamento precisa de HTTPS
+ formulário de agendamento da Clínica Vida+ vai precisar do https para garantir a privacidade do paciente e médico ,como o cpf do paciente. Já que o mesmo possui uma cipritografia que impede essas informações de serem adulteradas ou interceptadas.
