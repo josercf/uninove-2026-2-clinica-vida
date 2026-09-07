@@ -8,7 +8,7 @@ aplicação completa entregue na Aula 20. O enunciado completo do case está em
 
 ## Identificação
 
-- Nome completo: José Romualdo da Costa
-- RA: 1234567890
+- Nome completo: Otavio Junior Angelo Nascimento
+- RA: 926115589
 - Turma: quinta
-- O que espero aprender: publicar minha primeira aplicação web na internet.
+- O que espero aprender: Aprender a estrturar paginas na WEB.
