@@ -1,0 +1,66 @@
+:root {
+    --cor-primaria: #005f73;
+    --cor-secundaria: #0a9396;
+    --cor-fundo: #f8f9f4;
+    --cor-texto: #2b2d42;
+    --fonte-principal: 'Segoe UI', Tahoma, geneva, verdana, sans-serif;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: var(--cor-primaria);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--cor-secundaria);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
