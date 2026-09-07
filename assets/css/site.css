@@ -1,0 +1,88 @@
+:root {
+    --vida-primaria: #0B6E75;
+    --vida-secundaria: #2E9E7E;
+    --vida-destaque: #E4572E;
+    --vida-fundo: #F4F7F6;
+    --vida-texto: #1F2A30;
+    --vida-borda: #D6E2E0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--vida-texto);
+    background-color: var(--vida-fundo);
+}
+
+header {
+    background-color: var(--vida-primaria);
+    color: #FFFFFF;
+    padding: 24px 32px;
+}
+
+header h1 { 
+    margin: 0; 
+    font-size: 1.8rem; 
+}
+
+nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 12px 0 0 0;
+    padding: 0;
+}
+
+nav a { 
+    color: #FFFFFF; 
+    text-decoration: none; 
+    font-weight: 600; 
+}
+
+/* Passo 4: Cards das Especialidades com Flexbox */
+.lista-especialidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.lista-especialidades li {
+    background-color: #FFFFFF;
+    border: 1px solid var(--vida-borda);
+    padding: 16px;
+    border-radius: 8px;
+    flex: 1 1 200px;
+}
+
+/* Passo 5: Tabela e Rodapé */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background-color: #FFFFFF; 
+}
+
+th {
+    background-color: var(--vida-primaria);
+    color: #FFFFFF;
+    text-align: left;
+    padding: 12px 16px;
+}
+
+td { 
+    padding: 12px 16px; 
+    border-bottom: 1px solid var(--vida-borda); 
+}
+
+footer {
+    background-color: var(--vida-texto);
+    color: #FFFFFF;
+    padding: 24px 32px;
+    margin-top: 40px;
+}
