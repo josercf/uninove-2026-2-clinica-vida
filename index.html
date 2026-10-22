@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Vida+</title>
+
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script src="assets/js/agendamento.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Clínica Vida+</h1>
+        <p>Cuidando da sua saúde com atenção e qualidade.</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="agendamento.html">Agendar consulta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>A clínica</h2>
+            <p>
+                A Clínica Vida+ oferece atendimento dedicado ao cuidado
+                e ao bem-estar dos pacientes.
+            </p>
+        </section>
+
+        <section id="especialidades">
+            <h2>Nossas especialidades</h2>
+
+            <label for="busca-especialidade">
+                Buscar especialidade
+            </label>
+
+            <input
+                type="search"
+                id="busca-especialidade"
+                placeholder="Cardiologia, Pediatria..."
+                autocomplete="off"
+            >
+
+            <ul class="lista-especialidades">
+                <li>Cardiologia</li>
+                <li>Dermatologia</li>
+                <li>Ortopedia</li>
+                <li>Pediatria</li>
+            </ul>
+
+            <p id="nenhuma-especialidade" class="oculto">
+                Nenhuma especialidade encontrada.
+            </p>
+        </section>
+
+        <section id="medicos">
+            <h2>Nossa equipe</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Especialidade</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Ana Prado</td>
+                        <td>Cardiologia</td>
+                    </tr>
+                    <tr>
+                        <td>Bruno Lima</td>
+                        <td>Dermatologia</td>
+                    </tr>
+                    <tr>
+                        <td>Carla Souza</td>
+                        <td>Pediatria</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="agendamento">
+            <h2>Agende sua consulta</h2>
+            <p>Escolha uma especialidade e agende seu atendimento.</p>
+            <a href="agendamento.html">Ir para o agendamento</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Clínica Vida+ — Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

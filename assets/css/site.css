@@ -1,0 +1,83 @@
+nav { 
+    color: #1F2A30; 
+}   /* 1 seletor de tipo             ->  0 - 0 - 0 - 1 */
+nav a  { 
+    color: #0B6E75; 
+}   /* 2 seletores de tipo           ->  0 - 0 - 0 - 2 */
+.menu-link { 
+    color: #2E9E7E; 
+}   /* 1 seletor de classe           ->  0 - 0 - 1 - 0 */
+#agendamento {
+    color:#E4572E
+}
+*{
+    box-sizing: border-box;
+}
+
+.caixa {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.content {
+    box-sizing: content-box;
+}
+.border{
+    box-sizing: border-box;
+}
+
+/* Cards responsivos - atividade de Media Query */
+.lista-especialidades {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 640px) {
+    .lista-especialidades {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.lista-especialidades {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.lista-especialidades li {
+    padding: 20px;
+    border: 1px solid #0B6E75;
+    border-radius: 10px;
+    background-color: #f2fafa;
+}
+
+.lista-especialidades a {
+    text-decoration: none;
+    color: #0B6E75;
+    font-weight: bold;
+    display: block;
+}
+
+@media (min-width: 640px) {
+    .lista-especialidades {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.oculto {
+    display: none;
+}
+
+.aviso {
+    color: #C84B31;
+    font-size: 0.9rem;
+}
+
+.campo-invalido {
+    border-color: #C84B31;
+}
+
