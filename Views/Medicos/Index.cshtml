@@ -1,0 +1,25 @@
+@model IEnumerable<ClinicaVida.Web.Models.Medico>
+
+@{
+    ViewData["Title"] = "Médicos";
+}
+
+<h1>Médicos</h1>
+
+<!-- Formulário com o dropdown de especialidades e o botão Filtrar -->
+<form method="get" asp-action="Index" class="mb-3">
+    <select name="especialidadeId" asp-items="ViewBag.Especialidades">
+        <option value="">Todas as especialidades</option>
+    </select>
+    <button type="submit">Filtrar</button>
+</form>
+
+<!-- Lista no estilo <ul> / <li> com links no nome -->
+<ul>
+    @foreach (var medico in Model)
+    {
+        <li>
+            <a asp-action="Details" asp-route-id="@medico.Id">@medico.Nome</a>, CRM @medico.Crm
+        </li>
+    }
+</ul>
