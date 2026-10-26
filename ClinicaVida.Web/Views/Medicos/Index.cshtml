@@ -1,0 +1,70 @@
+
+@model IEnumerable<ClinicaVida.Web.Models.Medico>
+@using ClinicaVida.Web.Models
+
+@{
+    ViewData["Title"] = "Corpo clínico";
+    var especialidades = ViewBag.Especialidades as List<Especialidade>
+        ?? new List<Especialidade>();
+}
+
+<h1>Corpo clínico</h1>
+
+<p>Conheça os médicos da Clínica Vida+.</p>
+
+<form method="get" asp-controller="Medicos" asp-action="Index">
+    <label for="especialidadeId">Filtrar por especialidade:</label>
+
+    <select id="especialidadeId" name="especialidadeId">
+        <option value="">Todas as especialidades</option>
+
+        @foreach (var especialidade in especialidades)
+        {
+            <option value="@especialidade.Id"
+                    selected="@(Context.Request.Query["especialidadeId"] == especialidade.Id.ToString())">
+                @especialidade.Nome
+            </option>
+        }
+    </select>
+
+    <button type="submit">Filtrar</button>
+    <a asp-controller="Medicos" asp-action="Index">Limpar filtro</a>
+</form>
+
+<hr />
+
+@if (!Model.Any())
+{
+    <p>Nenhum médico encontrado para essa especialidade.</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CRM</th>
+                <th>Especialidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var medico in Model)
+            {
+                var especialidade = especialidades
+                    .FirstOrDefault(e => e.Id == medico.EspecialidadeId);
+
+                <tr>
+                    <td>@medico.Nome</td>
+                    <td>@medico.CRM</td>
+                    <td>@(especialidade?.Nome ?? "Não informada")</td>
+                    <td>
+                        <a asp-controller="Medicos"
+                           asp-action="Details"
+                           asp-route-id="@medico.Id">Ver detalhes</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

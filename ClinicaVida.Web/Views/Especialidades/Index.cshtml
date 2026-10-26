@@ -1,0 +1,40 @@
+
+@model IEnumerable<ClinicaVida.Web.Models.Especialidade>
+
+@{
+    ViewData["Title"] = "Especialidades";
+    var contagem = ViewBag.MedicosPorEspecialidade as Dictionary<int, int>
+        ?? new Dictionary<int, int>();
+}
+
+<h1>Especialidades médicas</h1>
+
+<p>Conheça as especialidades da Clínica Vida+ e os médicos disponíveis.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Especialidade</th>
+            <th>Descrição</th>
+            <th>Quantidade de médicos</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var especialidade in Model)
+        {
+            <tr>
+                <td>@especialidade.Nome</td>
+                <td>@especialidade.Descricao</td>
+                <td>@contagem.GetValueOrDefault(especialidade.Id, 0)</td>
+                <td>
+                    <a asp-controller="Medicos"
+                       asp-action="Index"
+                       asp-route-especialidadeId="@especialidade.Id">
+                        Ver médicos
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
