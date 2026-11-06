@@ -1,0 +1,38 @@
+@model ClinicaVida.Web.Models.Consulta
+@{ ViewData["Title"] = "Agendar consulta"; }
+
+<h1>Agendar consulta</h1>
+
+<form asp-controller="Consultas" asp-action="Agendar" method="post">
+  <div asp-validation-summary="ModelOnly" class="erro-resumo"></div>
+
+  <label asp-for="PacienteId"></label>
+  <select asp-for="PacienteId" asp-items="ViewBag.Pacientes">
+    <option value="">Selecione o paciente</option>
+  </select>
+  <span asp-validation-for="PacienteId" class="erro-campo"></span>
+
+  <label asp-for="MedicoId"></label>
+  <select asp-for="MedicoId" asp-items="ViewBag.Medicos">
+    <option value="">Selecione o médico</option>
+  </select>
+  <span asp-validation-for="MedicoId" class="erro-campo"></span>
+
+  <label asp-for="Data"></label>
+  <input asp-for="Data" />
+  <span asp-validation-for="Data" class="erro-campo"></span>
+
+  <label asp-for="Horario"></label>
+  <input asp-for="Horario" />
+  <span asp-validation-for="Horario" class="erro-campo"></span>
+
+  <label asp-for="Observacoes"></label>
+  <textarea asp-for="Observacoes" rows="3"></textarea>
+  <span asp-validation-for="Observacoes" class="erro-campo"></span>
+
+  <button type="submit">Confirmar agendamento</button>
+</form>
+
+@section Scripts {
+  <partial name="_ValidationScriptsPartial" />
+}

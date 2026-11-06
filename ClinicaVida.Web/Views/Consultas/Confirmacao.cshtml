@@ -1,0 +1,11 @@
+@model ClinicaVida.Web.Models.Consulta
+@{ ViewData["Title"] = "Consulta agendada"; }
+
+<h1>Consulta agendada</h1>
+
+<p>Paciente: <strong>@ViewBag.NomePaciente</strong></p>
+<p>Médico: <strong>@ViewBag.NomeMedico</strong></p>
+<p>Data: <strong>@Model.Data.ToString("dd/MM/yyyy")</strong></p>
+<p>Horário: <strong>@Model.Horario.ToString(@"hh\:mm")</strong></p>
+
+<a asp-action="Agendar">Agendar outra consulta</a>
