@@ -17,3 +17,8 @@ aplicação completa entregue na Aula 20. O enunciado completo do case está em
 - RA: 925110473
 - Turma: Quinta-feira
 - O que espero aprender: Um pouco mais de front end e back end, aprender sobre criptografias SI em geral.
+
+- Nome: Marina Bianca Freitas de Sousa;
+- RA: 925107606;
+- Turma: Quinta-feira;
+- O que espero aprender: Tudo que é necessário para desenvolver um site.
